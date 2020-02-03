@@ -43,8 +43,8 @@ ball.shape("circle")
 ball.color("white")
 ball.penup()
 ball.goto(0, 0)
-ball.x = 1
-ball.y = 1
+ball.x = 1/5
+ball.y = 1/5
 
 #create score
 score_player1 = 0

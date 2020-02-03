@@ -8,9 +8,11 @@ import turtle
 #Basic window configuration
 w = turtle.Screen()
 w.title("Super Ping Pong Game     @karlgarmor")
-w.bgcolor("black")
+#w.bgcolor("black")
+w.bgpic("fondo.gif")
 w.setup(width = 800, height = 600)
 w.tracer(0)
+#w.addshape("~/SuperSnakeGame/head2.gif")
 
 
 
