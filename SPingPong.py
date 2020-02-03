@@ -36,11 +36,13 @@ player2.shapesize(stretch_wid = 5, stretch_len = 1)
 
 #create ball
 ball = turtle.Turtle()
-ball.speed(0)
+ball.speed(10)
 ball.shape("circle")
 ball.color("white")
 ball.penup()
 ball.goto(0, 0)
+ball.x = -1
+ball.y = -1
 
 #functions to move each one players
 #functions player1 to up
@@ -84,4 +86,23 @@ w.onkeypress(player2_down, "Down")
 while True:
     w.update()
 
+    #configure move of ball
+    ball.setx(ball.xcor() + ball.x)
+    ball.sety(ball.ycor() + ball.y)
+
+    #configure ball in border
+
+    if ball.ycor() > 290:
+        ball.y *= -1
+
+    if ball.ycor() < -290:
+        ball.y *= -1
+
+    #configure ball in final score
+
+    if ball.xcor() > 390:
+        ball.goto(0,0)
+
+    if ball.xcor() < -390:
+        ball.goto(0,0)
 
