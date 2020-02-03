@@ -4,6 +4,7 @@
 
 import turtle
 #import the turtle library to create all graphical instructions
+import os
 
 #Basic window configuration
 w = turtle.Screen()
@@ -12,7 +13,8 @@ w.title("Super Ping Pong Game     @karlgarmor")
 w.bgpic("fondo.gif")
 w.setup(width = 800, height = 600)
 w.tracer(0)
-#w.addshape("~/SuperSnakeGame/head2.gif")
+w.addshape("~/SuperPingPongGame/p1.gif")
+w.addshape("~/SuperPingPongGame/p2.gif")
 
 
 
@@ -22,7 +24,7 @@ w.tracer(0)
 #player 1
 player1 = turtle.Turtle()
 player1.speed(0)
-player1.shape("square")
+player1.shape("~/SuperPingPongGame/p1.gif")
 player1.color("red")
 player1.penup()
 player1.goto(-350, 0)
@@ -31,7 +33,7 @@ player1.shapesize(stretch_wid = 5, stretch_len = 1)
 #player 2
 player2 = turtle.Turtle()
 player2.speed(0)
-player2.shape("square")
+player2.shape("~/SuperPingPongGame/p2.gif")
 player2.color("blue")
 player2.penup()
 player2.goto(350, 0)
