@@ -47,8 +47,8 @@ ball.shape("circle")
 ball.color("white")
 ball.penup()
 ball.goto(0, 0)
-ball.x = 1/5
-ball.y = 1/5
+ball.x = 1/3
+ball.y = 1/3
 
 #create score
 score_player1 = 0
@@ -108,10 +108,16 @@ while True:
     ball.sety(ball.ycor() + ball.y)
 
     #configure ball in border
-    if ball.ycor() > 290:
+    #if ball.ycor() > 290:
+     #   ball.y *= -1
+
+    #if ball.ycor() < -290:
+     #   ball.y *= -1
+
+    if ball.ycor() > 248:
         ball.y *= -1
 
-    if ball.ycor() < -290:
+    if ball.ycor() < -250:
         ball.y *= -1
 
     #configure ball in final score
