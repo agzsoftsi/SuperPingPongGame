@@ -34,6 +34,16 @@ player2.goto(350, 0)
 player2.shapesize(stretch_wid = 5, stretch_len = 1)
 
 
+#create ball
+ball = turtle.Turtle()
+ball.speed(0)
+ball.shape("circle")
+ball.color("white")
+ball.penup()
+ball.goto(0, 0)
+
+
+
 
 
 #infinite loop to excecute all instruction in the game

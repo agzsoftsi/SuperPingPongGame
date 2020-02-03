@@ -8,7 +8,8 @@ import turtle
 #Basic window configuration
 w = turtle.Screen()
 w.title("Super Ping Pong Game     @karlgarmor")
-w.bgcolor(width=800,height=600)
+w.bgcolor("black")
+w.setup(width = 800, height = 600)
 w.tracer(0)
 
 
@@ -31,6 +32,16 @@ player2.color("blue")
 player2.penup()
 player2.goto(350, 0)
 player2.shapesize(stretch_wid = 5, stretch_len = 1)
+
+
+#create ball
+ball = turtle.Turtle()
+ball-speed(0)
+player2.shape("circle")
+player2.color("white")
+player2.penup()
+player2.goto(0, 0)
+
 
 
 
