@@ -42,12 +42,46 @@ ball.color("white")
 ball.penup()
 ball.goto(0, 0)
 
+#functions to move each one players
+#functions player1 to up
+def player1_up():
+    y = player1.ycor()
+    y += 20
+    player1.sety(y)
+
+#functions player1 to down
+def player1_down():
+    y = player1.ycor()
+    y -= 20
+    player1.sety(y)
+
+#functions player2 to up
+def player2_up():
+    y = player2.ycor()
+    y += 20
+    player2.sety(y)
+
+
+#functions player1 to down
+def player2_down():
+    y = player2.ycor()
+    y -= 20
+    player2.sety(y)
+
+
+
+#configure keyboard to listen the functions
+w.listen()
+w.onkeypress(player1_up, "w")
+w.onkeypress(player1_down, "s")
+w.onkeypress(player2_up, "Up")
+w.onkeypress(player2_down, "Down")
 
 
 
 
 #infinite loop to excecute all instruction in the game
 while True:
-    w.update() 
+    w.update()
 
 
