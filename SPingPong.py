@@ -10,7 +10,8 @@ w = turtle.Screen()
 w.title("Super Ping Pong Game     @karlgarmor")
 w.bgcolor("black")
 w.setup(width = 800, height = 600)
-w.tracer(0)
+#w.tracer(8, 25)
+
 
 
 
@@ -36,13 +37,13 @@ player2.shapesize(stretch_wid = 5, stretch_len = 1)
 
 #create ball
 ball = turtle.Turtle()
-ball.speed(10)
+ball.speed(0)
 ball.shape("circle")
 ball.color("white")
 ball.penup()
 ball.goto(0, 0)
-ball.x = -1
-ball.y = -1
+ball.x = 2
+ball.y = 2
 
 #functions to move each one players
 #functions player1 to up
@@ -91,7 +92,6 @@ while True:
     ball.sety(ball.ycor() + ball.y)
 
     #configure ball in border
-
     if ball.ycor() > 290:
         ball.y *= -1
 
@@ -99,10 +99,22 @@ while True:
         ball.y *= -1
 
     #configure ball in final score
-
     if ball.xcor() > 390:
         ball.goto(0,0)
 
     if ball.xcor() < -390:
         ball.goto(0,0)
+
+    #configure ball collision with players
+    if ((ball.xcor() < -340 and ball.xcor() > -350)
+           and (ball.ycor() < player1.ycor() + 50
+           and ball.ycor() > player1.ycor() - 50)):
+        ball.x *= -1
+
+    if ((ball.xcor() > 340 and ball.xcor() < 350)
+           and (ball.ycor() < player2.ycor() + 50
+           and ball.ycor() > player2.ycor() - 50)):
+        ball.x *= -1
+
+
 
