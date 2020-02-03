@@ -38,13 +38,13 @@ player2.shapesize(stretch_wid = 5, stretch_len = 1)
 
 #create ball
 ball = turtle.Turtle()
-ball.speed(6)
+ball.speed(0)
 ball.shape("circle")
 ball.color("white")
 ball.penup()
 ball.goto(0, 0)
-ball.x = 1
-ball.y = 1
+ball.x = 1/5
+ball.y = 1/5
 
 #create score
 score_player1 = 0
@@ -52,6 +52,7 @@ score_player2 = 0
 pen = turtle.Turtle()
 pen.speed(0)
 pen.color("white")
+pen.penup()
 pen.hideturtle()
 pen.goto(0,260)
 pen.write("0                    0", align = "center", font = ("Courier", 20, "bold"))
